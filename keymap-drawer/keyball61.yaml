@@ -53,10 +53,10 @@ layers:
   - {t: '`', s: '~'}
   - {t: '-', h: '$$mdi:apple-keyboard-control$$', s: _}
   - {t: '=', h: LGUI, s: +}
-  - $$mdi:apple-keyboard-option$$
   - '&mkp MB1'
-  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
+  - {t: '''', s: '"'}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - $$mdi:keyboard-esc$$
