@@ -22,25 +22,19 @@
     delay-ms = <0>;                   // 0
 };
 
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <150>;
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
 };
 
 / {
     scroll_encoder: scroll_encoder {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
-        track-remainders;
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <100>;
     };
 
     keymap {
