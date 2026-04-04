@@ -77,7 +77,7 @@
             ;
     };
 
-	left_encoder: encoder_left {
+	left_encoder: left_encoder {
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
         steps = <20>;
