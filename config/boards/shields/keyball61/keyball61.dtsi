@@ -80,7 +80,7 @@
 	left_encoder: left_encoder {
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
-        steps = <30>;
+        steps = <20>;
         a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 	    b-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		status = "disabled";
@@ -89,7 +89,7 @@
     sensors {
 		compatible = "zmk,keymap-sensors";
 		sensors = <&left_encoder>;
-		triggers-per-rotation = <15>;
+		triggers-per-rotation = <10>;
 	};
 
     default_transform: keymap_transform_0 {
